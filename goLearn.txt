@@ -1,0 +1,89 @@
+- A go program is made from bunch of packages
+
+package main
+
+- program execution starts from the main package.
+
+
+import "fmt"
+
+- packages with import path "fmt" can be used in this program.
+- two ways to import paths
+- import "fmt"
+- import "math"  or
+- import(
+        "fmt"
+        "math"
+  )
+
+
+- functions in go
+- func name_of_function( [list of function parameters] ) [return_types]
+{
+    body of the function
+}
+
+- example:
+func add(a int, b int) int
+{
+    return a+b
+}
+
+
+- creating variables
+var variable_names data_type_optional
+
+- example:
+var a, b int
+
+- example array
+var a [10]float32
+prime_numbers := [6]int{2, 3, 5, 7, 11, 13}
+
+- An array has a fixed size. A slice, on the other hand, is a dynamically-sized, flexible view into the elements of an array
+var num []int /* a slice of unspecified size */
+var sl []int := primes[1:4]
+
+- for loop, repeat
+- for i:=0; i<10; i++ {
+    sum += i
+  }
+  fmt.Println("Total sum=",sum)
+  
+
+- structures in go
+type structure_variable_type struct {
+    member definitions;
+    member definitions;
+}
+variable_name := structure_variable_type {member1_value, member2_value, ...}
+
+type Vertex struct {
+    X int
+    Y int
+}
+
+func main() {
+    v := Vertex{1, 2}
+    v.X = 4
+    fmt.Println(v.X)
+}
+
+- "=" means assign whereas ":=" means declare and assign    
+
+- data types: boolean, numerci(int, float), string, derived(pointer, array, structure, union, function, slice, interface, map, channel)
+
+- to for all goroutines to finish, use var wg sync.WaitGroup.
+- wg.Add(1) for each go routine and wg.Wait() for all of them to finish
+
+- unbuffered channels are blocking: go routine will wait at the line where it reads the data from the channel until the data is not put on the channel, same way until the data is not read from the channel the go routine will not move on from the line where it puts the data on the channel
+
+- channels are similar to semaphores
+
+
+
+
+
+
+
+
