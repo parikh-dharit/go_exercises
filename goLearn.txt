@@ -1,3 +1,12 @@
+- used gvm to manage different go versions:
+        - https://github.com/moovweb/gvm
+        - to run any go version >1.4 you'll need go1.4
+        - to list install go versions: gvm list
+        - to see available go versions for download: gvm listall
+        - to install a version: gvm install go1.5
+        - after installing, to use that version: gvm use go1.5
+        - to uninstall gvm and all go versions and packages: gvm implode
+
 - A go program is made from bunch of packages
 
 package main
