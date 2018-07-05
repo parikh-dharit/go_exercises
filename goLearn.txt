@@ -87,6 +87,9 @@ func main() {
 
 - data types: boolean, numerci(int, float), string, derived(pointer, array, structure, union, function, slice, interface, map, channel)
 
+- variables and functions defined in a block can not be accessed from the outside, that block is their scope, those defined outside of any blocks have the package as their scope.
+- make first letter of the variable or the function capital, if you want it to be visible(accessible) from outside the project.
+
 - to for all goroutines to finish, use var wg sync.WaitGroup.
 - wg.Add(1) for each go routine and wg.Wait() for all of them to finish
 
