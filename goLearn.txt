@@ -6,6 +6,11 @@
         - to install a version: gvm install go1.5
         - after installing, to use that version: gvm use go1.5
         - to uninstall gvm and all go versions and packages: gvm implode
+        
+- Using an IDE
+        - run on terminal: go env
+        - copy GOROOT and GOPATH values
+        - set this path values in the IDE's configuration file
 
 - A go program is made from bunch of packages
 
