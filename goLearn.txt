@@ -58,12 +58,21 @@ prime_numbers := [6]int{2, 3, 5, 7, 11, 13}
 var num []int /* a slice of unspecified size */
 var sl []int := primes[1:4]
 
+- map initialisation
+// Initializes a map with space for 15 items
+m := make(map[string]int32, 15)
+// Initializes a map with an entries
+mp := map[string]int{"a":7, "b":18, "c":42}
+
 - for loop, repeat
 - for i:=0; i<10; i++ {
     sum += i
   }
   fmt.Println("Total sum=",sum)
   
+  for i, v := range mp {
+      fmt.Println(i, v)
+  }  
 
 - structures in go
 type structure_variable_type struct {
